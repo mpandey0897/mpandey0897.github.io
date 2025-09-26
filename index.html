@@ -2,28 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
   <title>Manish Pandey</title>
 
   <!-- SEO -->
   <meta name="description" content="Manish Pandey — Postdoctoral Researcher in the Stochastics Group at Aarhus University. Research in probability, random graphs, stochastic geometry, and complex networks." />
+  <link rel="canonical" href="https://mpandey0897.github.io/" />
+
+  <!-- Social -->
+  <meta property="og:title" content="Manish Pandey" />
+  <meta property="og:description" content="Postdoctoral researcher working on probability, random graphs, and stochastic geometry at Aarhus University." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- HEADER -->
-  <header>
+  <!-- HEADER (sticky, compact, professional) -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <div class="branding">
-        <!-- Replace profile.jpg with your actual image filename -->
-        <img src="profile.jpg" alt="Portrait" class="profile-pic" />
-        <div>
-          <h1 class="site-title">Manish Pandey</h1>
-          <p class="site-subtitle">Postdoctoral Researcher · Stochastics Group · Aarhus University</p>
+      <a class="brand" href="#home" aria-label="Go to home">
+        <!-- Replace profile.jpg with your photo or remove <img> if not needed -->
+        <img src="profile.jpg" alt="Portrait of Manish Pandey" class="brand-avatar" />
+        <div class="brand-text">
+          <span class="brand-title">Manish Pandey</span>
+          <span class="brand-subtitle">Postdoctoral Researcher · Stochastics Group · Aarhus University</span>
         </div>
-      </div>
-      <nav aria-label="Primary">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#home" aria-current="page">Home</a></li>
           <li><a href="#research">Research</a></li>
@@ -34,43 +54,171 @@
     </div>
   </header>
 
-  <!-- MAIN -->
+  <!-- OPTIONAL BANNER (hero). Add hero.jpg to your repo or remove this <section>. -->
+  <section class="hero" id="home" role="region" aria-label="Hero banner">
+    <!-- If you prefer a solid color only, remove the inline style below and rely on CSS. -->
+    <!-- <div class="hero-bg"></div> -->
+    <div class="container hero-content">
+      <h1>Manish Pandey</h1>
+      <p>Probability · Random Graphs · Stochastic Geometry</p>
+      <p class="hero-contact">
+        <a href="mailto:m.pandey@math.au.dk" class="button">m.pandey@math.au.dk</a>
+      </p>
+    </div>
+  </section>
+
   <main id="main">
-    <section id="home" class="container">
+    <section class="container section">
       <h2>About Me</h2>
-      <p>Hello there, and a warm welcome to my virtual abode! 
-      As a postdoctoral researcher in the Stochastics group at Aarhus University, I work on problems at the interface of probability theory, random graph models, and stochastic geometry. My current research explores the behavior of spatially embedded networks governed by Gibbsian interactions, with a focus on understanding their structural and probabilistic properties.</p>
+      <p>
+        I am a postdoctoral researcher in the Stochastics Group at Aarhus University. My research sits at the interface of probability theory, random graph models, and stochastic geometry. I study spatially embedded networks governed by Gibbsian interactions, with emphasis on large deviation principles, rare events, and limiting behavior.
+      </p>
+      <p>
+        I also teach courses in probability theory and random complex networks at the graduate level. I completed my PhD at Eindhoven University of Technology (TU/e) within the NETWORKS program, affiliated with the Probability group. My thesis was titled
+        <em>“Centrality measures and connectivity properties in large networks.”</em>
+      </p>
       <p>📫 Contact: <a href="mailto:m.pandey@math.au.dk">m.pandey@math.au.dk</a></p>
     </section>
 
-    <section id="research" class="container">
+    <section id="research" class="container section">
       <h2>Research Interests</h2>
-      <ul>
+      <ul class="clean-list two-col">
         <li>Centrality measures in networks</li>
         <li>Random graphs and local convergence</li>
         <li>Network robustness and cascades</li>
         <li>Probability theory and stochastic processes</li>
+        <li>Stochastic geometry and spatial Gibbs models</li>
       </ul>
     </section>
 
-    <section id="cv" class="container">
+    <section id="cv" class="container section">
       <h2>Curriculum Vitae</h2>
-      <p>You can download my CV 
+      <p>
+        You can download my CV
         <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" download>here</a>.
       </p>
     </section>
 
-    <section id="publications" class="container">
+    <section id="publications" class="container section">
       <h2>Publications</h2>
-      <!-- Your publications list here -->
+      <ol class="pub-list">
+        <li>
+          <article>
+            <header>
+              <h3 class="pub-title">Length of stationary Gaussian excursions</h3>
+              <div class="pub-meta">
+                <time datetime="2023">2023</time> ·
+                Arijit Chakrabarty, Manish Pandey, Sukrit Chakrabarty ·
+                <em>Proceedings of the American Mathematical Society</em>, 151(3), 1339–1348
+              </div>
+            </header>
+            <p class="pub-links">
+              <a href="https://www.ams.org/journals/proc/2023-151-03/S0002-9939-2022-16245-5/home.html" target="_blank" rel="noopener noreferrer">Link to article</a>
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article>
+            <header>
+              <h3 class="pub-title">Connectivity of random graphs after centrality-based vertex removal</h3>
+              <div class="pub-meta">
+                <time datetime="2024">2024</time> ·
+                Remco van der Hofstad, Manish Pandey ·
+                <em>Journal of Applied Probability</em>, 61, 967–998
+              </div>
+            </header>
+            <p class="pub-links">
+              <a href="https://www.cambridge.org/core/journals/journal-of-applied-probability/article/connectivity-of-random-graphs-after-centralitybased-vertex-removal/BE54A5D20FBBAF0394DA40EAC39178B1" target="_blank" rel="noopener noreferrer">Link to article</a>
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article>
+            <header>
+              <h3 class="pub-title">Are giants in random digraphs ‘almost’ local?</h3>
+              <div class="pub-meta">
+                <time datetime="2025">2025</time> ·
+                Remco van der Hofstad, Manish Pandey ·
+                <em>Electronic Communications in Probability</em>, 30: 1–13
+              </div>
+            </header>
+            <p class="pub-links">
+              <a href="https://projecteuclid.org/journals/electronic-communications-in-probability/volume-30/issue-none/Are-giants-in-random-digraphs-almost-local/10.1214/25-ECP694.full" target="_blank" rel="noopener noreferrer">Link to article</a>
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article>
+            <header>
+              <h3 class="pub-title">Communication protocol for a satellite-swarm interferometer for low-frequency radio astronomy</h3>
+              <div class="pub-meta">
+                <time datetime="2023">2023</time> ·
+                Oliver Nagy, Manish Pandey, Georgios Exarchakos, Mark Bentum, Remco van der Hofstad ·
+                <em>arXiv preprint</em>
+              </div>
+            </header>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/2312.15814" target="_blank" rel="noopener noreferrer">Link to article</a>
+            </p>
+          </article>
+        </li>
+
+        <li>
+          <article>
+            <header>
+              <h3 class="pub-title">Centrality Measures: Who Is the Most Important in a Network?</h3>
+              <div class="pub-meta">
+                <time datetime="2023">2023</time> ·
+                Manish Pandey ·
+                <em>The Network Pages</em>
+              </div>
+            </header>
+            <p class="pub-links">
+              <a href="https://www.networkpages.nl/centrality-measures-who-is-the-most-important-in-a-network/" target="_blank" rel="noopener noreferrer">Link to article</a>
+            </p>
+          </article>
+        </li>
+      </ol>
+
+      <h3>Ongoing Work</h3>
+      <ul class="clean-list">
+        <li><strong>Cascading in networks</strong> — with Souvik Dhara and Leonard Schulman</li>
+        <li><strong>Bringing order to centrality measures</strong> — with Oliver Nagy, Georgios Exarchakos, and Remco van der Hofstad</li>
+        <li><strong>On the locality of the centrality comparison curves and centrality measures</strong> — with Remco van der Hofstad and Georgios Exarchakos</li>
+      </ul>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>© <time datetime="2025">2025</time> Manish Pandey · Built with GitHub Pages</p>
     </div>
   </footer>
+
+  <!-- Active-link on scroll (progressive enhancement) -->
+  <script>
+    (function() {
+      const links = Array.from(document.querySelectorAll('.site-nav a'));
+      const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+      const sections = document.querySelectorAll('main section[id], .hero#home');
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.id;
+          const a = map.get(id);
+          if (!a) return;
+          if (entry.isIntersecting) {
+            links.forEach(l => l.removeAttribute('aria-current'));
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+      sections.forEach(sec => io.observe(sec));
+    })();
+  </script>
 </body>
 </html>
