@@ -173,3 +173,44 @@ a:focus-visible, button:focus-visible {
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .9em; color: var(--muted); }
   .section { padding: .75rem 0; }
 }
+
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 1rem 0 0.5rem;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  gap: .5rem;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb a {
+  color: var(--link);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb li[aria-current="page"] {
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Button (reuse hero-contact style) */
+.button {
+  display: inline-block;
+  padding: .5rem .9rem;
+  background: var(--brand);
+  color: #fff;
+  border-radius: var(--radius-1);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: .5rem;
+}
+.button:hover {
+  filter: brightness(1.1);
+}
