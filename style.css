@@ -1,58 +1,119 @@
+/* Base */
+:root {
+  --content-max: 72rem;
+  --color-bg: #0f172a;
+  --color-text: #0f172a;
+  --color-light: #cbd5e1;
+  --color-link: #2563eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #222;
-  line-height: 1.6;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--color-text);
+  background: #fff;
+}
+.container {
+  width: min(92%, var(--content-max));
+  margin-inline: auto;
+}
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: .5rem .75rem;
+  background: var(--color-bg);
+  color: #fff;
+  border-radius: .5rem;
 }
 
+/* Header */
 header {
-  background: #0d47a1;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
+  background: var(--color-bg);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-
-header h1 {
-  margin: 0.2em 0;
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.75rem 0;
 }
-
-header nav a {
-  color: white;
-  margin: 0 1em;
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.site-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-light);
+}
+nav[aria-label="Primary"] ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav a {
   text-decoration: none;
-  font-weight: bold;
+  color: #e2e8f0;
+  padding: .375rem .5rem;
+  border-radius: .5rem;
+  transition: background 0.2s;
+}
+nav a:hover,
+nav a[aria-current="page"] {
+  background: #1e293b;
+  color: #fff;
 }
 
-header nav a:hover {
+/* Sections */
+section {
+  padding: 2rem 0;
+}
+section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+a {
+  color: var(--color-link);
+}
+a:hover {
   text-decoration: underline;
 }
 
-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h2 {
-  color: #0d47a1;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.3rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-a {
-  color: #1565c0;
-}
-
+/* Footer */
 footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.25rem 0;
+  color: #475569;
   text-align: center;
-  padding: 1rem;
-  background: #eee;
-  font-size: 0.9rem;
-  margin-top: 2rem;
 }
