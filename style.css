@@ -1,7 +1,8 @@
-/* =========================
+/* ====================================
    Design system
-========================= */
+==================================== */
 :root {
+  /* Layout & spacing */
   --max-width: 72rem;
   --space-1: .25rem;
   --space-2: .5rem;
@@ -13,41 +14,43 @@
 
   /* Colors (light) */
   --bg: #ffffff;
-  --text: #0f172a;
-  --muted: #475569;
-  --border: #e5e7eb;
-  --brand: #0f172a;
-  --brand-weak: #1e293b;
-  --link: #2563eb;
-  --nav-text: #e2e8f0;
+  --text: #0f172a;     /* slate-900 */
+  --muted: #475569;    /* slate-600 */
+  --border: #e5e7eb;   /* gray-200 */
+  --brand: #0f172a;    /* header bg */
+  --brand-weak: #1e293b; /* slate-800 */
+  --link: #2563eb;     /* blue-600 */
+  --nav-text: #e2e8f0; /* slate-200 */
 
-  /* Hero overlay */
   --hero-overlay: rgba(0,0,0,.45);
+
+  color-scheme: light dark;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0b1220;
-    --text: #e5e7eb;
-    --muted: #a8b1c0;
-    --border: #1f2937;
-    --brand: #0b1220;
-    --brand-weak: #111827;
-    --link: #93c5fd;
-    --nav-text: #e5e7f0;
+    --bg: #0b1220;          /* deep navy */
+    --text: #e5e7eb;        /* gray-200 */
+    --muted: #a8b1c0;       /* slate-300-ish */
+    --border: #1f2937;      /* slate-800 */
+    --brand: #0b1220;       /* header bg dark */
+    --brand-weak: #111827;  /* slate-900 */
+    --link: #93c5fd;        /* blue-300 */
+    --nav-text: #e5e7f0;    /* light slate */
     --hero-overlay: rgba(0,0,0,.5);
   }
 }
 
-/* Reduce motion */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
 }
 
-/* =========================
+/* ====================================
    Base
-========================= */
+==================================== */
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -61,8 +64,12 @@ body {
 
 .container { width: min(92%, var(--max-width)); margin-inline: auto; }
 
-a { color: var(--link); text-underline-offset: 2px; }
-a:focus-visible, button:focus-visible {
+a {
+  color: var(--link);
+  text-underline-offset: 2px;
+}
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, .button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
   border-radius: var(--radius-1);
@@ -71,11 +78,16 @@ a:focus-visible, button:focus-visible {
 .skip-link {
   position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;
 }
-.skip-link:focus { position: static; width: auto; height: auto; padding: .5rem .75rem; background: var(--brand); color: #fff; border-radius: var(--radius-1); }
+.skip-link:focus {
+  position: static; width: auto; height: auto;
+  padding: .5rem .75rem;
+  background: var(--brand); color: #fff;
+  border-radius: var(--radius-1);
+}
 
-/* =========================
+/* ====================================
    Header
-========================= */
+==================================== */
 .site-header {
   position: sticky; top: 0; z-index: 10;
   background: var(--brand);
@@ -88,8 +100,11 @@ a:focus-visible, button:focus-visible {
   padding: .6rem 0;
 }
 
-/* Brand (name + subtitle + optional avatar) */
-.brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: inherit; }
+/* Brand */
+.brand {
+  display: flex; align-items: center; gap: var(--space-3);
+  text-decoration: none; color: inherit;
+}
 .brand-avatar {
   width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: 0 0 auto;
   box-shadow: 0 0 0 2px rgba(255,255,255,.3);
@@ -99,7 +114,10 @@ a:focus-visible, button:focus-visible {
 .brand-subtitle { font-size: .9rem; color: #cbd5e1; line-height: 1.2; }
 
 /* Nav */
-.site-nav ul { list-style: none; display: flex; gap: .25rem; margin: 0; padding: 0; }
+.site-nav ul {
+  list-style: none; display: flex; gap: .25rem;
+  margin: 0; padding: 0;
+}
 .site-nav a {
   color: var(--nav-text);
   text-decoration: none;
@@ -107,100 +125,28 @@ a:focus-visible, button:focus-visible {
   border-radius: var(--radius-1);
   display: inline-block;
 }
-.site-nav a:hover { background: var(--brand-weak); color: #fff; }
-.site-nav a[aria-current="page"] { background: var(--brand-weak); color: #fff; }
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  background: var(--brand-weak); color: #fff; text-decoration: none;
+}
 
-/* =========================
-   Hero (optional banner)
-========================= */
+/* ====================================
+   Hero
+==================================== */
 .hero {
   position: relative;
   padding: clamp(2rem, 6vw, 4rem) 0;
-  background: linear-gradient(180deg, rgba(15,23,42,1) 0%, rgba(15,23,42,.95) 40%, rgba(15,23,42,.9) 100%), url("hero.jpg") center/cover no-repeat;
+  /* If hero.jpg is absent, only the gradient shows */
+  background:
+    linear-gradient(180deg, rgba(15,23,42,1) 0%, rgba(15,23,42,.95) 40%, rgba(15,23,42,.9) 100%),
+    url("hero.jpg") center/cover no-repeat;
   color: #fff;
 }
 .hero .hero-content { position: relative; }
 .hero h1 { margin: 0 0 .25rem; font-weight: 600; font-size: clamp(1.6rem, 2.4vw, 2rem); }
 .hero p { margin: 0.25rem 0; color: #e2e8f0; }
-.hero-contact .button {
-  display: inline-block; margin-top: .75rem; background: #fff; color: #0f172a;
-  padding: .5rem .8rem; border-radius: var(--radius-1); text-decoration: none; font-weight: 500;
-}
-.hero-contact .button:hover { filter: brightness(.95); }
-/* Remove the background image if not present */
-@supports not (background: paint(something)) {
-  /* no-op, kept for clarity */
-}
 
-/* =========================
-   Sections
-========================= */
-.section { padding: 2rem 0; }
-.section h2 { margin: 0 0 .75rem; font-size: 1.4rem; }
-.clean-list { list-style: none; padding: 0; margin: 0; }
-.clean-list li { margin: .35rem 0; }
-
-/* Two-column list on wide screens */
-.two-col {
-  columns: 1;
-}
-@media (min-width: 720px) {
-  .two-col { columns: 2; column-gap: 2rem; }
-}
-
-/* Publications */
-.pub-list { padding-left: 1.25rem; }
-.pub-list > li { margin-bottom: 1rem; }
-.pub-title { margin: 0 0 .25rem; font-size: 1.05rem; line-height: 1.35; }
-.pub-meta { color: var(--muted); font-size: .95rem; }
-.pub-links a { display: inline-block; margin-top: .25rem; }
-
-/* =========================
-   Footer
-========================= */
-.site-footer {
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  text-align: center;
-  padding: 1.25rem 0;
-}
-
-/* =========================
-   Print (simple CV-friendly)
-========================= */
-@media print {
-  .site-header, .hero, .site-footer, .skip-link { display: none !important; }
-  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .9em; color: var(--muted); }
-  .section { padding: .75rem 0; }
-}
-
-
-/* Breadcrumbs */
-.breadcrumb {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin: 1rem 0 0.5rem;
-}
-.breadcrumb ol {
-  list-style: none;
-  display: flex;
-  gap: .5rem;
-  padding: 0;
-  margin: 0;
-}
-.breadcrumb a {
-  color: var(--link);
-  text-decoration: none;
-}
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-.breadcrumb li[aria-current="page"] {
-  font-weight: 500;
-  color: var(--text);
-}
-
-/* Button (reuse hero-contact style) */
+/* Button (generic + hero) */
 .button {
   display: inline-block;
   padding: .5rem .9rem;
@@ -210,7 +156,87 @@ a:focus-visible, button:focus-visible {
   text-decoration: none;
   font-weight: 500;
   margin-top: .5rem;
+  border: 1px solid transparent;
 }
-.button:hover {
-  filter: brightness(1.1);
+.button:hover { filter: brightness(1.08); text-decoration: none; }
+.hero-contact .button {
+  margin-top: .75rem; background: #fff; color: #0f172a;
+}
+.hero-contact .button:hover { filter: brightness(.95); }
+
+/* ====================================
+   Sections
+==================================== */
+.section { padding: 2rem 0; }
+.section h2 { margin: 0 0 .75rem; font-size: 1.4rem; }
+
+.clean-list { list-style: none; padding: 0; margin: 0; }
+.clean-list li { margin: .35rem 0; }
+
+/* Simple two-column text lists (progressively enhanced) */
+.two-col { columns: 1; }
+@media (min-width: 720px) {
+  .two-col { columns: 2; column-gap: 2rem; }
+}
+
+/* Research grid: 3 cols on desktop, 2 on tablets, 1 on mobile */
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .5rem 2rem;
+  list-style: none; padding: 0; margin: 0;
+}
+@media (min-width: 600px) {
+  .research-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .research-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Publications */
+.pub-list { padding-left: 1.25rem; }
+.pub-list > li { margin-bottom: 1rem; }
+.pub-title { margin: 0 0 .25rem; font-size: 1.05rem; line-height: 1.35; }
+.pub-meta { color: var(--muted); font-size: .95rem; }
+.pub-links a { display: inline-block; margin-top: .25rem; }
+
+/* ====================================
+   Breadcrumbs
+==================================== */
+.breadcrumb {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 1rem 0 .5rem;
+}
+.breadcrumb ol {
+  list-style: none;
+  display: flex; gap: .5rem;
+  padding: 0; margin: 0;
+}
+.breadcrumb li + li::before {
+  content: "›";
+  opacity: .6;
+  margin: 0 .25rem 0 .15rem;
+}
+.breadcrumb a { color: var(--link); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb li[aria-current="page"] { font-weight: 500; color: var(--text); }
+
+/* ====================================
+   Footer
+==================================== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  padding: 1.25rem 0;
+}
+
+/* ====================================
+   Print (simple CV-friendly)
+==================================== */
+@media print {
+  .site-header, .hero, .site-footer, .skip-link { display: none !important; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .9em; color: var(--muted); }
+  .section { padding: .75rem 0; }
 }
