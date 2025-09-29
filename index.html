@@ -78,18 +78,31 @@
       <p>Contact: <a href="mailto:m.pandey@math.au.dk">m.pandey@math.au.dk</a></p>
     </section>
 
-    <!-- Research interests -->
-    <section id="research" class="container section">
-      <h2>Research Interests</h2>
-      <ul class="clean-list two-col">
-        <li>Probability theory</li>
-        <li>Stochastic processes on random graphs</li>
-        <li>Spatial random graphs</li>
-        <li>Gibbs models</li>
-        <li>Large deviation principal</li>
-        <li>Associative memory model/ Neural network</li>
-      </ul>
-    </section>
+  <!-- Research interests -->
+<section id="research" class="container section">
+  <h2>Research Interests</h2>
+  <ul class="research-grid">
+    <li>Probability theory</li>
+    <li>Stochastic processes on random graphs</li>
+    <li>Spatial random graphs</li>
+    <li>Gibbs models</li>
+    <li>Large deviation principle</li>
+    <li>Associative memory models / Neural networks</li>
+  </ul>
+</section>
+
+<style>
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 0.5rem 2rem;                      /* adjust spacing */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
 
     <!-- Publications -->
     <section id="publications" class="container section">
