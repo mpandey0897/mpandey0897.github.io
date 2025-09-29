@@ -29,14 +29,8 @@
       padding: 1rem;
       background: var(--bg);
     }
-    .card h3 {
-      margin: 0 0 .5rem;
-      font-size: 1.05rem;
-    }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
+    .card h3 { margin: 0 0 .5rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -45,33 +39,39 @@
   <!-- Shared header -->
   <div id="header-include"></div>
 
+  <!-- Breadcrumb (back to Home) -->
+  <nav class="breadcrumb container" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Hobbies</li>
+    </ol>
+  </nav>
+
   <main id="main">
     <section class="container section">
       <h2>Hobbies</h2>
-      <p>
-        I enjoy staying active and outdoors. A few favorites:
-      </p>
+      <p>I enjoy staying active and outdoors. A few favorites:</p>
 
       <ul class="cards">
         <li class="card">
           <h3>Running</h3>
-          <p>I’ve participated in the Eindhoven quarter-marathon (2022) and half-marathon (2023), and I keep up a regular training rhythm.</p>
+          <p>I’ve participated in the Eindhoven quarter-marathon (2022) and half-marathon (2023), and I like to participate in such activities.</p>
         </li>
         <li class="card">
           <h3>Travelling</h3>
-          <p>I love discovering new places and cultures — e.g., Hallstatt’s historic salt mine in Austria was a recent highlight.</p>
+          <p>I love discovering new places and cultures, e.g., Hallstatt’s historic salt mine in Austria was a recent highlight.</p>
         </li>
         <li class="card">
           <h3>Trekking</h3>
-          <p>Time in nature helps me reset — long trails and mountain viewpoints are my preferred weekends.</p>
+          <p>Time in nature helps me reset, long trails and mountain viewpoints are my preferred weekends.</p>
         </li>
         <li class="card">
-          <h3>Badminton & Fitness</h3>
-          <p>Casual badminton sessions and strength work keep me balanced alongside research.</p>
+          <h3>Badminton & Bouldering</h3>
+          <p>Casual badminton sessions and bouldering work keep me balanced alongside research.</p>
         </li>
         <li class="card">
           <h3>Photography</h3>
-          <p>Landscapes and travel diaries — often folded into my “wandering pahadi” posts.</p>
+          <p>Landscapes and travel diaries, often folded into my “wandering pahadi” posts.</p>
         </li>
         <li class="card">
           <h3>Reading</h3>
@@ -85,6 +85,14 @@
           Hobbies on Google Sites
         </a>.
       </p>
+    </section>
+
+    <!-- Quick links back to other pages -->
+    <section class="container section" aria-label="Quick navigation">
+      <a class="button" href="/">← Home</a>
+      <a class="button" href="/research/">Research</a>
+      <a class="button" href="/experiences.html">Experience</a>
+      <a class="button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">CV</a>
     </section>
 
     <!-- Optional: keep Thesis & CV links handy, like other pages -->
@@ -112,7 +120,7 @@
   <!-- Include loader for header/footer -->
   <script src="/include.js"></script>
 
-  <!-- (Optional) same active-link logic; highlights anchors within this page -->
+  <!-- Active-link logic (optional) -->
   <script>
     (function() {
       const links = Array.from(document.querySelectorAll('.site-nav a'));
