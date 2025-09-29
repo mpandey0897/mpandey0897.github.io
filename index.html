@@ -6,12 +6,12 @@
   <title>Manish Pandey</title>
 
   <!-- SEO -->
-  <meta name="description" content="Manish Pandey — Postdoctoral Researcher in the Stochastics Group at Aarhus University. Research in probability, random graphs, stochastic processes, and complex networks." />
+  <meta name="description" content="Manish Pandey — Postdoctoral Researcher in the Stochastics Group at Aarhus University." />
   <link rel="canonical" href="https://mpandey0897.github.io/" />
 
   <!-- Social -->
   <meta property="og:title" content="Manish Pandey" />
-  <meta property="og:description" content="Postdoctoral researcher working on probability, random graphs, and stochastic processes at Aarhus University." />
+  <meta property="og:description" content="Postdoctoral researcher at Aarhus University." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
 
@@ -29,8 +29,7 @@
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Go to home">
-        <!-- Optional avatar; remove if not used -->
+      <a class="brand" href="index.html#home" aria-label="Go to home">
         <img src="profile.jpg" alt="Portrait of Manish Pandey" class="brand-avatar" />
         <div class="brand-text">
           <span class="brand-title">Manish Pandey</span>
@@ -39,34 +38,32 @@
       </a>
       <nav class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="#home" aria-current="page">Home</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#thesis">Thesis</a></li>
+          <li><a href="index.html#home" aria-current="page">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
           <li><a href="experiences.html">Experience</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="index.html#thesis">Thesis</a></li>
+          <li><a href="index.html#cv">CV</a></li>
+          <li><a href="research.html">Research</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-<!-- COVER / HERO -->
-<section class="hero" id="home" role="region" aria-label="Hero banner">
-  <div class="container hero-content">
-    <h1>Manish Pandey</h1>
-    <p>Probability · Random Graphs · Stochastic Processes</p>
-    <p class="hero-contact">
-      <a href="mailto:m.pandey@math.au.dk" class="button"> m.pandey@math.au.dk</a>
-    </p>
-  </div>
-</section>
-
-
+  <!-- COVER / HERO -->
+  <section class="hero" id="home" role="region" aria-label="Hero banner">
+    <div class="container hero-content">
+      <h1>Manish Pandey</h1>
+      <p>Probability · Random Graphs · Stochastic Processes</p>
+      <p class="hero-contact">
+        <a href="mailto:m.pandey@math.au.dk" class="button"> m.pandey@math.au.dk</a>
+      </p>
+    </div>
+  </section>
 
   <main id="main">
     <!-- About -->
-    <section class="container section">
+    <section id="about" class="container section">
       <h2>About Me</h2>
       <p>
         I am a postdoctoral researcher in the Stochastics Group at Aarhus University. My research sits at the interface of probability theory, random graph models, and stochastic processes. I study spatially embedded networks governed by Gibbsian interactions, with emphasis on large deviation principles, rare events, and limiting behavior.
@@ -77,126 +74,28 @@
       </p>
     </section>
 
-    <!-- PhD Thesis -->
-<section id="thesis" class="container section">
-  <h2>Thesis</h2>
-  <p>
-    <strong>Centrality measures and connectivity properties in large networks</strong> — Eindhoven University of Technology (TU/e), 2025.
-  </p>
-  <a href="https://research.tue.nl/en/publications/centrality-measures-and-connectivity-properties-in-large-networks"
-     class="button" target="_blank" rel="noopener noreferrer">
-    🔗 View Thesis on TU/e Research Portal
-  </a>
-</section>
+    <!-- Thesis (also present on research page) -->
+    <section id="thesis" class="container section">
+      <h2>Thesis</h2>
+      <p>
+        <strong>Centrality measures and connectivity properties in large networks</strong> — Eindhoven University of Technology (TU/e), 2025.
+      </p>
+      <a href="https://research.tue.nl/en/publications/centrality-measures-and-connectivity-properties-in-large-networks"
+         class="button" target="_blank" rel="noopener noreferrer">
+        🔗 View Thesis on TU/e Research Portal
+      </a>
+    </section>
 
-
-  <!-- Research interests -->
-<section id="research" class="container section">
-  <h2>Research Interests</h2>
-  <ul class="research-grid">
-    <li>Probability theory</li>
-    <li>Stochastic processes on random graphs</li>
-    <li>Spatial random graphs</li>
-    <li>Gibbs models</li>
-    <li>Large deviation principle</li>
-    <li>Associative memory models / Neural networks</li>
-  </ul>
-</section>
-
-<style>
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto);   /* 2 rows */
-  gap: 0.5rem 2rem;                      /* adjust spacing */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-</style>
-
-
-    <!-- Publications -->
-    <section id="publications" class="container section">
-      <h2>Publications</h2>
-      <ol class="pub-list">
-        <li>
-          <article>
-            <h3 class="pub-title">Length of stationary Gaussian excursions</h3>
-            <div class="pub-meta">
-              <time datetime="2023">2023</time> · Arijit Chakrabarty, Manish Pandey, Sukrit Chakrabarty ·
-              <em>Proceedings of the American Mathematical Society</em>, 151(3), 1339–1348
-            </div>
-            <p class="pub-links">
-              <a href="https://www.ams.org/journals/proc/2023-151-03/S0002-9939-2022-16245-5/home.html" target="_blank" rel="noopener noreferrer">Link to article</a>
-            </p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3 class="pub-title">Connectivity of random graphs after centrality-based vertex removal</h3>
-            <div class="pub-meta">
-              <time datetime="2024">2024</time> · Remco van der Hofstad, Manish Pandey ·
-              <em>Journal of Applied Probability</em>, 61, 967–998
-            </div>
-            <p class="pub-links">
-              <a href="https://www.cambridge.org/core/journals/journal-of-applied-probability/article/connectivity-of-random-graphs-after-centralitybased-vertex-removal/BE54A5D20FBBAF0394DA40EAC39178B1" target="_blank" rel="noopener noreferrer">Link to article</a>
-            </p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3 class="pub-title">Are giants in random digraphs ‘almost’ local?</h3>
-            <div class="pub-meta">
-              <time datetime="2025">2025</time> · Remco van der Hofstad, Manish Pandey ·
-              <em>Electronic Communications in Probability</em>, 30: 1–13
-            </div>
-            <p class="pub-links">
-              <a href="https://projecteuclid.org/journals/electronic-communications-in-probability/volume-30/issue-none/Are-giants-in-random-digraphs-almost-local/10.1214/25-ECP694.full" target="_blank" rel="noopener noreferrer">Link to article</a>
-            </p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3 class="pub-title">Communication protocol for a satellite-swarm interferometer for low-frequency radio astronomy</h3>
-            <div class="pub-meta">
-              <time datetime="2023">2023</time> · Oliver Nagy, Manish Pandey, Georgios Exarchakos, Mark Bentum, Remco van der Hofstad ·
-              <em>arXiv preprint</em>
-            </div>
-            <p class="pub-links">
-              <a href="https://arxiv.org/abs/2312.15814" target="_blank" rel="noopener noreferrer">Link to article</a>
-            </p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3 class="pub-title">Centrality Measures: Who Is the Most Important in a Network?</h3>
-            <div class="pub-meta">
-              <time datetime="2023">2023</time> · Manish Pandey ·
-              <em>The Network Pages</em>
-            </div>
-            <p class="pub-links">
-              <a href="https://www.networkpages.nl/centrality-measures-who-is-the-most-important-in-a-network/" target="_blank" rel="noopener noreferrer">Link to article</a>
-            </p>
-          </article>
-        </li>
-      </ol>
+    <!-- CV (also present on research page) -->
+    <section id="cv" class="container section">
+      <h2>Curriculum Vitae</h2>
+      <p>You can view or download my full CV by clicking the button below.</p>
+      <a href="Resume.pdf" class="button" target="_blank" rel="noopener noreferrer" download>
+        📄 Download Full CV
+      </a>
     </section>
   </main>
 
-
-   <!-- CV -->
-<section id="cv" class="container section">
-  <h2>Curriculum Vitae</h2>
-  <p>
-    You can view or download my full CV by clicking the button below.
-  </p>
-  <a href="Resume.pdf" class="button" target="_blank" rel="noopener noreferrer" download>
-    📄 Download Full CV
-  </a>
-</section>
-
-    
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>© <time datetime="2025">2025</time> Manish Pandey · Built with GitHub Pages</p>
