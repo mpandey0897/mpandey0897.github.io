@@ -5,107 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hobbies — Manish Pandey</title>
   <meta name="description" content="Hobbies of Manish Pandey — trekking, travelling, running, and more." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
+    /* Page-specific: simple card grid for hobbies */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
       padding: 0;
-      line-height: 1.6;
-      background: #fafafa;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-    h1, h2 {
-      color: #222;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    header {
-      background: #007acc;
-      color: white;
-      padding: 16px 24px;
-    }
-    header h1 {
       margin: 0;
-      font-size: 24px;
+      list-style: none;
     }
-    nav {
-      margin-top: 8px;
+    @media (min-width: 720px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-1);
+      padding: 1rem;
+      background: var(--bg);
     }
-    nav a {
-      margin-right: 12px;
-      color: white;
-      font-weight: 500;
+    .card h3 {
+      margin: 0 0 .5rem;
+      font-size: 1.05rem;
     }
-    footer {
-      margin-top: 40px;
-      padding: 16px;
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-      border-top: 1px solid #ddd;
+    .card p {
+      margin: 0;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Manish Pandey</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="hobbies.html">Hobbies</a>
-      <a href="Resume.pdf" target="_blank">CV</a>
-    </nav>
-  </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main class="container">
-    <h1>Hobbies</h1>
-    <p>
-      Some of my hobbies include <strong>trekking in nature</strong>, <strong>travelling</strong>, 
-      <strong>running</strong>, and staying active through sports like badminton. 
-    </p>
+  <!-- Shared header -->
+  <div id="header-include"></div>
 
-    <h2>Running</h2>
-    <p>
-      I’ve participated in events such as the Eindhoven half-marathon (2023) and quarter-marathon (2022).
-    </p>
+  <main id="main">
+    <section class="container section">
+      <h2>Hobbies</h2>
+      <p>
+        I enjoy staying active and outdoors. A few favorites:
+      </p>
 
-    <h2>Travelling</h2>
-    <p>
-      I enjoy discovering new places and cultures. For example, my visit to Hallstatt in Austria included 
-      exploring the historic salt mine.
-    </p>
+      <ul class="cards">
+        <li class="card">
+          <h3>Running</h3>
+          <p>I’ve participated in the Eindhoven quarter-marathon (2022) and half-marathon (2023), and I keep up a regular training rhythm.</p>
+        </li>
+        <li class="card">
+          <h3>Travelling</h3>
+          <p>I love discovering new places and cultures — e.g., Hallstatt’s historic salt mine in Austria was a recent highlight.</p>
+        </li>
+        <li class="card">
+          <h3>Trekking</h3>
+          <p>Time in nature helps me reset — long trails and mountain viewpoints are my preferred weekends.</p>
+        </li>
+        <li class="card">
+          <h3>Badminton & Fitness</h3>
+          <p>Casual badminton sessions and strength work keep me balanced alongside research.</p>
+        </li>
+        <li class="card">
+          <h3>Photography</h3>
+          <p>Landscapes and travel diaries — often folded into my “wandering pahadi” posts.</p>
+        </li>
+        <li class="card">
+          <h3>Reading</h3>
+          <p>Non-fiction on science and philosophy, plus the occasional novel for contrast.</p>
+        </li>
+      </ul>
 
-    <h2>Trekking</h2>
-    <p>
-      Trekking is a way for me to recharge and enjoy nature, offering a refreshing break from daily routines. 
-    </p>
+      <p style="margin-top:1rem">
+        👉 More details and photos on my Google Sites page:
+        <a href="https://sites.google.com/view/manish-pandey/hobbies" target="_blank" rel="noopener noreferrer">
+          Hobbies on Google Sites
+        </a>.
+      </p>
+    </section>
 
-    <p>
-      👉 More details and photos can be found on my Google Sites page: 
-      <a href="https://sites.google.com/view/manish-pandey/hobbies" target="_blank" rel="noopener noreferrer">
-        Hobbies on Google Sites
-      </a>.
-    </p>
+    <!-- Optional: keep Thesis & CV links handy, like other pages -->
+    <section id="thesis" class="container section">
+      <h2>Thesis</h2>
+      <p><strong>Centrality measures and connectivity properties in large networks</strong> — Eindhoven University of Technology (TU/e), 2025.</p>
+      <a href="https://research.tue.nl/en/publications/centrality-measures-and-connectivity-properties-in-large-networks"
+         class="button" target="_blank" rel="noopener noreferrer">
+        🔗 View Thesis on TU/e Research Portal
+      </a>
+    </section>
+
+    <section id="cv" class="container section">
+      <h2>Curriculum Vitae</h2>
+      <p>You can view or download my full CV by clicking the button below.</p>
+      <a href="/Resume.pdf" class="button" target="_blank" rel="noopener noreferrer" download>
+        📄 Download Full CV
+      </a>
+    </section>
   </main>
 
-  <footer>
-    © <span id="year"></span> Manish Pandey
-  </footer>
+  <!-- Shared footer -->
+  <div id="footer-include"></div>
 
+  <!-- Include loader for header/footer -->
+  <script src="/include.js"></script>
+
+  <!-- (Optional) same active-link logic; highlights anchors within this page -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      const links = Array.from(document.querySelectorAll('.site-nav a'));
+      const map = new Map(links.map(a => [a.getAttribute('href').replace(/^.*#?/, ''), a]));
+      const sections = document.querySelectorAll('main section[id]');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = entry.target.id;
+          const a = map.get(id);
+          if (!a) return;
+          if (entry.isIntersecting) {
+            links.forEach(l => l.removeAttribute('aria-current'));
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+      sections.forEach(sec => io.observe(sec));
+    })();
   </script>
 </body>
 </html>
