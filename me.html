@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>More About Me — Manish Pandey</title>
+  <meta name="description" content="More about Manish Pandey — from Nainital and Ranikhet, with a love for sports (especially badminton) and the mountains." />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Page-specific styles -->
+  <style>
+    .lead-photo {
+      margin: 0 0 1rem;
+    }
+    .lead-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius-1);
+      border: 1px solid var(--border);
+    }
+    .lead-photo figcaption {
+      margin-top: .5rem;
+      font-size: .95rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Optional split layout if you add a second image later */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .about-split {
+        grid-template-columns: 1.2fr .8fr;
+      }
+    }
+    .about-box {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-1);
+      padding: 1rem;
+      background: var(--bg);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Shared header -->
+  <div id="header-include"></div>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb container" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">More About Me</li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <section class="container section">
+      <figure class="lead-photo">
+        <!-- Replace /nainital.jpg with your actual image path -->
+        <img src="/nainital.jpg" alt="Nainital Lake town surrounded by mountains" />
+        <figcaption>Nainital — the eye-shaped lake town in Uttarakhand, India.</figcaption>
+      </figure>
+
+      <h2>More About Me</h2>
+      <div class="about-split">
+        <div class="about-box">
+          <p>
+            I hail from <strong>Nainital</strong> (pictured above), a stunning lake town nestled amidst the mountains in northern India.
+            The name comes from its distinguishing feature — an eye-shaped lake — with <em>“Naini”</em> meaning <em>eye</em> and
+            <em>“Tal”</em> meaning <em>lake</em>.
+          </p>
+          <p>
+            I was born in <strong>Ranikhet</strong>, and later my parents relocated to Nainital, where I spent my childhood alongside my sister.
+            I have a fondness for playing almost every sport, with <strong>badminton</strong> holding a special place as one of my favorites.
+          </p>
+        </div>
+
+        <!-- Optional second column (add an image or quick facts). Remove if not needed. -->
+        <div class="about-box">
+          <h3 style="margin-top:0">Quick facts</h3>
+          <ul class="clean-list">
+            <li>From: Nainital (born in Ranikhet)</li>
+            <li>Mountains &amp; lakes person</li>
+            <li>Sports fan — especially badminton</li>
+          </ul>
+          <!-- If you prefer an image here, replace the list with:
+          <img src="/badminton.jpg" alt="Badminton racket and shuttle" style="width:100%;height:auto;border-radius:var(--radius-1);" />
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick links back to other pages -->
+    <section class="container section" aria-label="Quick navigation">
+      <a class="button" href="/">← Home</a>
+      <a class="button" href="/research/">Research</a>
+      <a class="button" href="/experiences.html">Experience</a>
+      <a class="button" href="/hobbies.html">Hobbies</a>
+      <a class="button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+    </section>
+  </main>
+
+  <!-- Shared footer -->
+  <div id="footer-include"></div>
+
+  <!-- Include loader for header/footer -->
+  <script src="/include.js"></script>
+</body>
+</html>
