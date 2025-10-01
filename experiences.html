@@ -1,4 +1,47 @@
-<li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience — Manish Pandey</title>
+
+  <meta name="description" content="Professional and academic experience, internships, and awards for Manish Pandey." />
+  <link rel="canonical" href="https://mpandey0897.github.io/experiences.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .icon { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; fill: currentColor; }
+    .site-nav a svg { margin-right: 4px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#home" aria-label="Go to home">
+        <img src="profile.jpg" alt="Portrait of Manish Pandey" class="brand-avatar" />
+        <div class="brand-text">
+          <span class="brand-title">Manish Pandey</span>
+          <span class="brand-subtitle">Postdoctoral Researcher · Stochastics Group · Aarhus University</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#home" aria-current="page">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="experiences.html">Experience</a></li>
+          <li><a href="experiences.html#cv">CV</a></li>
+          <li><a href="/me.html">More about me</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li>
             <a href="https://github.com/mpandey0897" target="_blank" rel="noopener noreferrer">
               <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
                 <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
@@ -6,3 +49,112 @@
               GitHub
             </a>
           </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb (back to Home) -->
+  <nav class="breadcrumb container" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Experience</li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <!-- PROFESSIONAL & ACADEMIC EXPERIENCE -->
+    <section class="container section">
+      <h1>Professional & Academic Experience</h1>
+      <ul class="clean-list">
+        <li><strong>Supervision of PhD student</strong> — <time datetime="2025-08">Aug 2025</time> – present.</li>
+        <li><strong>Visiting Research Scholar</strong>, Purdue University, School of Industrial Engineering — Summer <time datetime="2024">2024</time>.</li>
+        <li><strong>Teaching Assistant</strong> (Calculus, Probability, Statistics), TU Eindhoven — <time datetime="2020-08">Aug 2020</time> – <time datetime="2023-02">Feb 2023</time>.</li>
+        <li><strong>Poster Presentation</strong>, LMS Probability Research School, Liverpool — <time datetime="2023-06-26">26 Jun 2023</time> – <time datetime="2023-06-30">30 Jun 2023</time>.</li>
+        <li><strong>Speaker</strong>, Networks Training Week, Asperen — <time datetime="2022-05">May 2022</time>; <time datetime="2022-10">Oct 2022</time>.</li>
+        <li><strong>Invited Speaker</strong>, Bézout–Eurandom Conference (Franco–Dutch Meeting), IHP, Paris — <time datetime="2021-07">Jul 2021</time>.</li>
+        <li><strong>Invited</strong>, Master Classes in Probability, Strasbourg University — <time datetime="2020-01">Jan 2020</time>.</li>
+      </ul>
+    </section>
+
+    <!-- INDUSTRY & RESEARCH INTERNSHIPS -->
+    <section class="container section">
+      <h2>Industry & Research Internships</h2>
+      <ul class="clean-list">
+        <li>
+          <strong>State Street Global Advisors</strong>, Bangalore — Intern, Trainee in Investment Research (Active Quantitative Equity), Summer <time datetime="2019">2019</time>.
+          <ul>
+            <li>Portfolio optimization (factor-model–based) following Beasley’s survey of models and approaches.</li>
+            <li>Accelerated large-scale matrix inversion via the Woodbury identity; unconstrained step &lt; 2 s for ~2×10<sup>5</sup> dimension.</li>
+            <li>Constrained portfolio optimization with CVXR on &gt;45,000 assets and 250 factors (industry/style).</li>
+          </ul>
+        </li>
+        <li>
+          <strong>NovelSynth Soft Solutions (Petrabytes)</strong>, Bangalore — Intern, Winter <time datetime="2017">2017</time>.
+          <ul>
+            <li>Studied and documented core ML algorithms (perceptron, neural networks) with worked examples.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="container section">
+      <h2>Academic Achievements & Awards</h2>
+      <ul class="clean-list">
+        <li>ISI Teachers’ Committee Awards for Outstanding Academic Performance in all semesters of M.Stat (2018–2020).</li>
+        <li>ISI Teachers’ Committee Awards for Outstanding Academic Performance in five of six semesters of B.Math (Hons.) (2015–2018).</li>
+        <li>Institute stipend/fellowship throughout M.Stat and B.Math (Hons.).</li>
+        <li>Offer received: IRMIA Labex Doctoral Grant (2020).</li>
+        <li>Nominated for the P. C. Mahalanobis Gold Medal (Top 4; M.Stat, 2018–2020, ISI).</li>
+        <li>International Rank 41 & Zonal Rank 1 (UP & Uttarakhand), SOF–International Mathematics Olympiad (2015).</li>
+        <li>All India Rank 9 — ISI M.Stat Entrance Examination.</li>
+        <li>Top 1% in NSEP (2014–2015); Merit Certificate, Indian Association of Physics Teachers.</li>
+      </ul>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="container section">
+      <h2>Curriculum Vitae</h2>
+      <p>You can view or download my full CV by clicking the button below.</p>
+      <a href="Resume.pdf" class="button" target="_blank" rel="noopener noreferrer">📄 Download Full CV</a>
+
+      <p class="hero-contact" style="margin-top:1rem;">
+        <strong>GitHub:</strong>
+        <a href="https://github.com/mpandey0897" class="button" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          Visit my GitHub
+        </a>
+      </p>
+    </section>
+
+    <section class="container section">
+      <p>⬅️ <a href="index.html#home">Back to Home</a></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>
+        © <time datetime="2025">2025</time> Manish Pandey · Built with GitHub Pages · 
+        <a href="https://github.com/mpandey0897" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+              0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
+              -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+              0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 
+              2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 
+              0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 
+              0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          GitHub
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
