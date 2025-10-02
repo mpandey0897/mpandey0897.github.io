@@ -264,3 +264,13 @@ a:focus-visible, button:focus-visible, .button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+.cards h3 a {
+  color: #000;             /* Black text */
+  text-decoration: none;   /* Remove underline */
+}
+
+.cards h3 a:hover {
+  text-decoration: underline; /* Optional: subtle underline on hover */
+}
+
