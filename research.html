@@ -5,33 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research — Manish Pandey</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Research of Manish Pandey — probability theory, random graphs, stochastic processes, publications, and thesis." />
+  <meta
+    name="description"
+    content="Research page of Manish Pandey — probability theory, stochastic processes, random graphs, stochastic geometry, and publications."
+  />
   <link rel="canonical" href="https://mpandey0897.github.io/research.html" />
 
-  <!-- Social -->
   <meta property="og:title" content="Research — Manish Pandey" />
-  <meta property="og:description" content="Research interests and publications." />
+  <meta
+    property="og:description"
+    content="Research interests, publications, preprints, and thesis of Manish Pandey."
+  />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    /* tiny helper to align the inline SVG with text */
-    .icon { width: 18px; height: 18px; vertical-align: middle; margin-right: 6px; fill: currentColor; }
-    .site-nav a svg { margin-right: 4px; }
+    .icon {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      margin-right: 6px;
+      fill: currentColor;
+    }
+
+    .site-nav a svg {
+      margin-right: 4px;
+    }
+
+    .research-intro {
+      max-width: 850px;
+      color: var(--muted, #555);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-subtitle {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .pub-section {
+      margin-top: 2rem;
+    }
+
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pub-list li + li {
+      margin-top: 1.25rem;
+    }
+
+    .pub-title {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .pub-meta {
+      color: var(--muted, #666);
+      line-height: 1.6;
+      font-size: 0.96rem;
+    }
+
+    .pub-links {
+      margin: 0.45rem 0 0;
+    }
+
+    .pub-links a {
+      text-decoration: none;
+    }
+
+    .pub-links a:hover {
+      text-decoration: underline;
+    }
+
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .quick-link-card {
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      background: #fff;
+    }
+
+    .quick-link-card h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1rem;
+    }
+
+    .quick-link-card p {
+      margin: 0 0 0.75rem;
+      color: var(--muted, #666);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .button-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="index.html#home" aria-label="Go to home">
@@ -41,6 +140,7 @@
           <span class="brand-subtitle">Postdoctoral Researcher · Stochastics Group · Aarhus University</span>
         </div>
       </a>
+
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html#home">Home</a></li>
@@ -61,150 +161,192 @@
     </div>
   </header>
 
-  <!-- Breadcrumb (back to Home) -->
   <nav class="breadcrumb container" aria-label="Breadcrumb">
     <ol>
-      <li><a href="/">Home</a></li>
+      <li><a href="index.html#home">Home</a></li>
       <li aria-current="page">Research</li>
     </ol>
   </nav>
-  
+
   <main id="main">
-    <!-- Research interests -->
     <section id="research" class="container section">
-      <h2>Research Interests</h2>
+      <h2>Research</h2>
+      <p class="research-intro">
+        My research lies in probability theory and network science, with a focus on random graphs,
+        stochastic processes, stochastic geometry, and centrality in networks. I am particularly interested
+        in the interplay between local structure and global behavior in large random networks.
+      </p>
+
+      <h3 class="section-subtitle">Research Interests</h3>
       <ul class="research-grid">
         <li>Probability theory</li>
-        <li>Stochastic processes on random graphs</li>
-        <li>Spatial random graphs</li>
-        <li>Gibbs models</li>
-        <li>Large deviation principle</li>
-        <li>Associative memory models / Neural networks</li>
+        <li>Stochastic processes</li>
+        <li>Random graphs</li>
+        <li>Stochastic geometry</li>
+        <li>Network science</li>
+        <li>Associative memory models</li>
       </ul>
     </section>
 
-    <!-- Publications -->
-<section id="publications" class="container section">
-  <h2>Publications</h2>
-  <ol class="pub-list">
-    <li>
-      <article>
-        <h3 class="pub-title">Length of stationary Gaussian excursions</h3>
-        <div class="pub-meta">
-          <time datetime="2023">2023</time> · Arijit Chakrabarty, Manish Pandey, Sukrit Chakrabarty ·
-          <em>Proceedings of the American Mathematical Society</em>, 151(3), 1339–1348
-        </div>
-        <p class="pub-links">
-          <a href="https://www.ams.org/journals/proc/2023-151-03/S0002-9939-2022-16245-5/home.html" target="_blank" rel="noopener noreferrer">Link to article</a>
-        </p>
-      </article>
-    </li>
+    <section id="publications" class="container section">
+      <h2>Publications</h2>
+      <ol class="pub-list">
+        <li>
+          <article>
+            <h3 class="pub-title">Length of stationary Gaussian excursions</h3>
+            <div class="pub-meta">
+              <time datetime="2023">2023</time> · A. Chakrabarty, M. Pandey, S. Chakrabarty ·
+              <em>Proceedings of the American Mathematical Society</em>, 151(3), 1339–1348
+            </div>
+            <p class="pub-links">
+              <a href="https://www.ams.org/journals/proc/2023-151-03/S0002-9939-2022-16245-5/home.html" target="_blank" rel="noopener noreferrer">Article</a>
+            </p>
+          </article>
+        </li>
 
-    <li>
-      <article>
-        <h3 class="pub-title">Connectivity of random graphs after centrality-based vertex removal</h3>
-        <div class="pub-meta">
-          <time datetime="2024">2024</time> · Remco van der Hofstad, Manish Pandey ·
-          <em>Journal of Applied Probability</em>, 61, 967–998
-        </div>
-        <p class="pub-links">
-          <a href="https://www.cambridge.org/core/journals/journal-of-applied-probability/article/connectivity-of-random-graphs-after-centralitybased-vertex-removal/BE54A5D20FBBAF0394DA40EAC39178B1" target="_blank" rel="noopener noreferrer">Link to article</a>
-        </p>
-      </article>
-    </li>
+        <li>
+          <article>
+            <h3 class="pub-title">Connectivity of random graphs after centrality-based vertex removal</h3>
+            <div class="pub-meta">
+              <time datetime="2024">2024</time> · R. van der Hofstad, M. Pandey ·
+              <em>Journal of Applied Probability</em>, 61, 967–998
+            </div>
+            <p class="pub-links">
+              <a href="https://www.cambridge.org/core/journals/journal-of-applied-probability/article/connectivity-of-random-graphs-after-centralitybased-vertex-removal/BE54A5D20FBBAF0394DA40EAC39178B1" target="_blank" rel="noopener noreferrer">Article</a>
+            </p>
+          </article>
+        </li>
 
-    <li>
-      <article>
-        <h3 class="pub-title">Are giants in random digraphs ‘almost’ local?</h3>
-        <div class="pub-meta">
-          <time datetime="2025">2025</time> · Remco van der Hofstad, Manish Pandey ·
-          <em>Electronic Communications in Probability</em>, 30: 1–13
-        </div>
-        <p class="pub-links">
-          <a href="https://projecteuclid.org/journals/electronic-communications-in-probability/volume-30/issue-none/Are-giants-in-random-digraphs-almost-local/10.1214/25-ECP694.full" target="_blank" rel="noopener noreferrer">Link to article</a>
-        </p>
-      </article>
-    </li>
+        <li>
+          <article>
+            <h3 class="pub-title">Are giants in random digraphs “almost” local?</h3>
+            <div class="pub-meta">
+              <time datetime="2025">2025</time> · R. van der Hofstad, M. Pandey ·
+              <em>Electronic Communications in Probability</em>, 30, 1–13
+            </div>
+            <p class="pub-links">
+              <a href="https://projecteuclid.org/journals/electronic-communications-in-probability/volume-30/issue-none/Are-giants-in-random-digraphs-almost-local/10.1214/25-ECP694.full" target="_blank" rel="noopener noreferrer">Article</a>
+            </p>
+          </article>
+        </li>
 
-     <li>
-  <article>
-    <h3 class="pub-title">Communication protocol for a satellite-swarm interferometer for low-frequency radio astronomy</h3>
-    <div class="pub-meta">
-      <time datetime="2026">2026</time> · Oliver Nagy, Manish Pandey, Georgios Exarchakos, Mark Bentum, Remco van der Hofstad ·
-      <em>Accepted for publication in Acta Astronautica</em>
-    </div>
-    <p class="pub-links">
-      <a href="https://arxiv.org/abs/2312.15814" target="_blank" rel="noopener noreferrer">Preprint</a>
-    </p>
-  </article>
-</li>
+        <li>
+          <article>
+            <h3 class="pub-title">Communication protocol for a satellite-swarm interferometer for low-frequency radio astronomy</h3>
+            <div class="pub-meta">
+              <time datetime="2026">2026</time> · M. Pandey, M. Bentum, O. Nagy, G. Exarchakos, R. van der Hofstad ·
+              <em>Accepted for publication in Acta Astronautica</em>
+            </div>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/2312.15814" target="_blank" rel="noopener noreferrer">Preprint</a>
+            </p>
+          </article>
+        </li>
+      </ol>
 
-    <!-- NEW PAPER -->
-    <li>
-      <article>
-        <h3 class="pub-title">Bringing order to network centrality measures</h3>
-        <div class="pub-meta">
-          <time datetime="2026">2026</time> · G. Exarchakos, R. van der Hofstad, O. Nagy, M. Pandey ·
-          <em>arXiv preprint</em>
-        </div>
-        <p class="pub-links">
-          <a href="https://arxiv.org/abs/2601.16236" target="_blank" rel="noopener noreferrer">Link to article</a>
-        </p>
-      </article>
-    </li>
+      <div class="pub-section">
+        <h3 class="section-subtitle">Preprints and Submitted Manuscripts</h3>
+        <ol class="pub-list">
+          <li>
+            <article>
+              <h3 class="pub-title">Bringing order to network centrality measures</h3>
+              <div class="pub-meta">
+                <time datetime="2026">2026</time> · G. Exarchakos, R. van der Hofstad, O. Nagy, M. Pandey ·
+                <em>arXiv preprint</em>
+              </div>
+              <p class="pub-links">
+                <a href="https://arxiv.org/abs/2601.16236" target="_blank" rel="noopener noreferrer">Preprint</a>
+              </p>
+            </article>
+          </li>
 
+          <li>
+            <article>
+              <h3 class="pub-title">Modelling active particle motion from fluorescence correlation spectroscopy data</h3>
+              <div class="pub-meta">
+                <time datetime="2026">2026</time> · M. A. Ramos-Docampo, C. Duan, N. Wang, M. Pandey, P. de Dios Andres, C. Hirsch, B. M. Städler ·
+                <em>Submitted manuscript</em>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
 
-    <li>
-      <article>
-        <h3 class="pub-title">Centrality Measures: Who Is the Most Important in a Network?</h3>
-        <div class="pub-meta">
-          <time datetime="2023">2023</time> · Manish Pandey ·
-          <em>The Network Pages</em>
-        </div>
-        <p class="pub-links">
-          <a href="https://www.networkpages.nl/centrality-measures-who-is-the-most-important-in-a-network/" target="_blank" rel="noopener noreferrer">Link to article</a>
-        </p>
-      </article>
-    </li>
-  </ol>
-</section>
+      <div class="pub-section">
+        <h3 class="section-subtitle">Thesis</h3>
+        <ol class="pub-list">
+          <li>
+            <article>
+              <h3 class="pub-title">Centrality measures and connectivity properties in large networks</h3>
+              <div class="pub-meta">
+                <time datetime="2025">2025</time> · Ph.D. thesis · Eindhoven University of Technology
+              </div>
+              <p class="pub-links">
+                <a href="https://research.tue.nl/en/publications/centrality-measures-and-connectivity-properties-in-large-networks" target="_blank" rel="noopener noreferrer">View thesis</a>
+              </p>
+            </article>
+          </li>
+        </ol>
+      </div>
 
+      <div class="pub-section">
+        <h3 class="section-subtitle">Expository Writing</h3>
+        <ol class="pub-list">
+          <li>
+            <article>
+              <h3 class="pub-title">Centrality Measures: Who Is the Most Important in a Network?</h3>
+              <div class="pub-meta">
+                <time datetime="2023">2023</time> · M. Pandey · <em>The Network Pages</em>
+              </div>
+              <p class="pub-links">
+                <a href="https://www.networkpages.nl/centrality-measures-who-is-the-most-important-in-a-network/" target="_blank" rel="noopener noreferrer">Article</a>
+              </p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-    <!-- Important Links -->
-<section id="cv" class="container section">
-  <h2>Important Links</h2>
-  <div class="contacts-grid">
-    <p class="hero-contact">
-      <strong>Email address:</strong>
-      <a href="mailto:m.pandey@math.au.dk" class="button">m.pandey@math.au.dk</a>
-    </p>
-    <p class="hero-contact">
-      <strong>Thesis:</strong>
-      <a href="https://research.tue.nl/en/publications/centrality-measures-and-connectivity-properties-in-large-networks"
-         class="button" target="_blank" rel="noopener noreferrer">🔗 View Thesis</a>
-    </p>
-    <p class="hero-contact">
-      <strong>Curriculum Vitae:</strong>
-      <a href="Resume.pdf" class="button" target="_blank" rel="noopener noreferrer">📄 Download CV</a>
-    </p>
-    <p class="hero-contact">
-      <strong>GitHub:</strong>
-      <a href="https://github.com/mpandey0897" class="button" target="_blank" rel="noopener noreferrer">
-        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
-          <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 
-            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-            0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-            -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
-            0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 
-            2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 
-            0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 
-            0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-        </svg>
-        Visit my GitHub
-      </a>
-    </p>
-  </div>
-</section>
+    <section id="links" class="container section">
+      <h2>Important Links</h2>
+      <div class="quick-links-grid">
+        <article class="quick-link-card">
+          <h3>Email</h3>
+          <p>For research-related inquiries, collaborations, or seminar invitations.</p>
+          <a class="button-inline" href="mailto:m.pandey@math.au.dk">m.pandey@math.au.dk</a>
+        </article>
+
+        <article class="quick-link-card">
+          <h3>Curriculum Vitae</h3>
+          <p>Academic CV including publications, positions, teaching, and awards.</p>
+          <a class="button-inline" href="Resume.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+        </article>
+
+        <article class="quick-link-card">
+          <h3>Thesis</h3>
+          <p>Ph.D. thesis on centrality measures and connectivity properties in large networks.</p>
+          <a
+            class="button-inline"
+            href="https://research.tue.nl/en/publications/centrality-measures-and-connectivity-properties-in-large-networks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View thesis
+          </a>
+        </article>
+
+        <article class="quick-link-card">
+          <h3>GitHub</h3>
+          <p>Code repositories, personal website source, and related academic projects.</p>
+          <a class="button-inline" href="https://github.com/mpandey0897" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            Visit GitHub
+          </a>
+        </article>
+      </div>
+    </section>
 
     <section class="container section">
       <p>⬅️ <a href="index.html#home">Back to Home</a></p>
@@ -214,7 +356,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>
-        © <time datetime="2025">2025</time> Manish Pandey · Built with GitHub Pages ·
+        © <time datetime="2026">2026</time> Manish Pandey · Built with GitHub Pages ·
         <a href="https://github.com/mpandey0897" target="_blank" rel="noopener noreferrer">
           <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
             <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 0-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
@@ -225,24 +367,29 @@
     </div>
   </footer>
 
-  <!-- Active-link on scroll -->
   <script>
-    (function() {
-      const links = Array.from(document.querySelectorAll('.site-nav a'));
-      const map = new Map(links.map(a => [a.getAttribute('href').replace(/^.*#?/, ''), a]));
-      const sections = document.querySelectorAll('main section[id]');
+    (function () {
+      const links = Array.from(document.querySelectorAll(".site-nav a"));
+      const map = new Map(
+        links
+          .filter(a => a.getAttribute("href") && a.getAttribute("href").includes("#"))
+          .map(a => [a.getAttribute("href").split("#")[1], a])
+      );
+
+      const sections = document.querySelectorAll("main section[id]");
       const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           const id = entry.target.id;
           const a = map.get(id);
           if (!a) return;
           if (entry.isIntersecting) {
-            links.forEach(l => l.removeAttribute('aria-current'));
-            a.setAttribute('aria-current', 'page');
+            links.forEach((l) => l.removeAttribute("aria-current"));
+            a.setAttribute("aria-current", "page");
           }
         });
-      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-      sections.forEach(sec => io.observe(sec));
+      }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+      sections.forEach((sec) => io.observe(sec));
     })();
   </script>
 </body>
