@@ -453,7 +453,25 @@ button:focus-visible,
   }
 
   .page-side-photo {
+    /*
+      On mobile, show the image before the main text content.
+      Remove/comment this order line if you want it to appear at the bottom again.
+    */
     order: 0;
+
+    /*
+      Normal image on mobile: it scrolls away naturally.
+    */
+    position: static;
+
+    /*
+      Sticky option for mobile.
+      Usually not recommended on small screens, but you can use it if needed.
+
+      position: sticky;
+      top: 6rem;
+    */
+
     justify-self: center;
     padding-top: 0;
     margin-bottom: 1.5rem;
