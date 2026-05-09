@@ -408,13 +408,15 @@ button:focus-visible,
   text-decoration: underline;
 }
 
+
+
 /* ====================================
    One independent right-side image
    for research/publication page
 ==================================== */
 .page-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-columns: minmax(0, 1fr) 340px;
   gap: 2.5rem;
   align-items: start;
 }
@@ -432,8 +434,8 @@ button:focus-visible,
 
 .page-side-photo img {
   width: auto;
-  max-width: 240px;
-  max-height: 360px;
+  max-width: 320px;
+  max-height: 620px;
   height: auto;
   object-fit: contain;
   border-radius: 18px;
@@ -454,10 +456,11 @@ button:focus-visible,
   }
 
   .page-side-photo img {
-    max-width: 220px;
-    max-height: 320px;
+    max-width: 280px;
+    max-height: 520px;
   }
 }
+
 
 /* ====================================
    Print
