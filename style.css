@@ -274,3 +274,43 @@ a:focus-visible, button:focus-visible, .button:focus-visible {
   text-decoration: underline; /* Optional: subtle underline on hover */
 }
 
+/* ====================================
+   Research page photo layout
+==================================== */
+.research-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) 280px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.research-photo-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.research-photo {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.14);
+  border: 1px solid var(--border);
+}
+
+/* On smaller screens, put the photo below the text */
+@media (max-width: 760px) {
+  .research-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .research-photo-wrap {
+    justify-content: flex-start;
+  }
+
+  .research-photo {
+    max-width: 240px;
+  }
+}
+
