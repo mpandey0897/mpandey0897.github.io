@@ -314,3 +314,42 @@ a:focus-visible, button:focus-visible, .button:focus-visible {
   }
 }
 
+/* ====================================
+   Publications section photo layout
+==================================== */
+.publications-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) 260px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.publications-photo-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.publications-photo {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.14);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 760px) {
+  .publications-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .publications-photo-wrap {
+    justify-content: flex-start;
+  }
+
+  .publications-photo {
+    max-width: 220px;
+  }
+}
+
