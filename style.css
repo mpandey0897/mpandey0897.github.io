@@ -449,11 +449,24 @@ button:focus-visible,
   }
 
   .page-side-photo {
-    position: static;
-    justify-self: start;
-    padding-top: 0;
-    margin-bottom: 1rem;
-  }
+  /*
+    Option 1: normal image.
+    The image stays at the top of the page layout and scrolls away naturally.
+  */
+  position: static;
+
+  /*
+    Option 2: sticky image.
+    Uncomment these two lines, and comment out position: static above,
+    if you want the image to remain visible while scrolling.
+
+    position: sticky;
+    top: 6rem;
+  */
+
+  justify-self: end;
+  padding-top: 1rem;
+}
 
   .page-side-photo img {
     max-width: 280px;
