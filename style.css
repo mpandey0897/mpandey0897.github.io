@@ -292,8 +292,8 @@ a:focus-visible, button:focus-visible, .button:focus-visible {
 .research-photo {
   width: 100%;
   max-width: 280px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 18px;
   box-shadow: 0 10px 28px rgba(0,0,0,.14);
   border: 1px solid var(--border);
